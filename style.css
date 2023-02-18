@@ -92,12 +92,32 @@ align-items: center;
 
 /***** Main *******/
 
-main {
-    width: 100%;
-    padding: 1.5rem 0;
-    position: relative;    
-    background-image: url("img\kelly-sikkema-ZbJfBi8H7KM-unsplash.jpg");
-  }
+.main-columns {
+   display: flex;
+   flex-direction: row;
+    
+  
+}
+
+.column-left {  
+  padding: 1.5rem 0;
+  width: 50%;
+  height: 300vh;
+  background-color: orange;
+  
+  
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  width: 50%;
+  height: 300vh;
+  background-color: red;
+  
+}
 
 
 h1 {
@@ -123,6 +143,7 @@ footer {
 .footer-note {
     display: flex;
     align-items: center;
+    font-size: 1rem !important;  
 }
 
 .fa:hover {
