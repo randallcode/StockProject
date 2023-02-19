@@ -83,6 +83,11 @@ nav {
     font-size: 1.5rem;    
 }
 
+
+.topa:hover {
+  opacity: 0.7;
+}
+
 .nav-ul a {
     text-decoration: none;
     color: white ;
@@ -133,8 +138,17 @@ nav {
   margin-top: 10px;
   font-size: 5rem;
   font-family: 'Roboto', sans-serif;
-  
+  text-decoration: none;
 }
+
+a {
+text-decoration: none;
+}
+
+.ra:hover {
+  color: white;
+}
+
 
 .topitem {
   background-image: url('/img/books.jpg');
@@ -144,13 +158,14 @@ nav {
 
 .middleitem {
   background-image: url('/img/youtube.jpg');
-  background-size: cover;
+  background-size: cover
+ 
   
 }
 
 .bottomitem {
   background-image: url('/img/websites.jpg');
-  background-size: cover;
+  background-size: 100% 100%;
   
 }
 
@@ -189,17 +204,17 @@ footer {
     color: white;
   }
 
-  .fa-instagram {
+ .fa-instagram {
     background: #125688;
     color: white;
   }
 
-  .fa-linkedin {
+ .fa-linkedin {
     background: #007bb5;
     color: white;
   }
   
-  .fa-youtube {
+.fa-youtube {
     background: #bb0000;
     color: white;
   }
