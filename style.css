@@ -47,13 +47,31 @@ table {
 /***** HEADER *******/
 
 header {
-    width: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
     padding: 1.5rem 0;
     background-image: linear-gradient(to right, #2b2d42, #8d99ae ); 
-    position: relative;
+    position: sticky;
+    top: 0;
     box-shadow: 0px 3px 10px;
     
 }
+
+
+
+
+/*header {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-image: linear-gradient(to right, #2b2d42, #8d99ae ); 
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 3px 10px;
+    
+}*/
+
 
 
 
@@ -208,7 +226,8 @@ footer {
     width: 100%;
     padding: 1.5rem 0;
     background-image: linear-gradient(to right, #2b2d42, #8d99ae ); 
-    position: relative;
+    position: sticky;
+    bottom: 0;
     box-shadow: 0px 0px 10px;
 }
 
@@ -252,3 +271,34 @@ footer {
     border-radius: 50%;
     box-shadow: 0px 0px 10px ;
   }
+
+
+  @media screen and (max-width: 481px) {
+    a.topa {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    input {
+      display: none;
+    }
+    
+    nav {
+      display: grid;
+      grid-template-columns: 100%;
+    }
+    div.column-left {
+      display: none;
+    }
+    div.main-columns {
+      display: grid;      
+      grid-template-columns: 100%;
+      text-align: center;
+    }
+    div.column-right {
+      width: 85%;  
+
+}
+  }
+
