@@ -60,21 +60,6 @@ header {
 }
 
 
-
-
-/*header {
-    width: 100%;
-    padding: 1.5rem 0;
-    background-image: linear-gradient(to right, #2b2d42, #8d99ae ); 
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 3px 10px;
-    
-}*/
-
-
-
-
 .logo {
     height: 4rem;
     width: 20rem;
@@ -334,16 +319,34 @@ footer {
       display: grid;
       grid-template-columns: 100%;
     }
-    div.column-left {
-      display: none;
-    }
-    div.main-columns {
-      display: grid;      
-      grid-template-columns: 100%;
-      text-align: center;
-    }
-    div.column-right {
-      width: auto;  
 
-}
+    /*div.column-left {
+      display: grid;      
+      grid-template-rows: 100%;
+      text-align: center;
+    }*/
+
+    div.main-columns {
+      display: flex;      
+      flex-direction: column;
+    }
+    div.column-left {
+      order: 1;
+      width: auto
+     
+    }
+       
+    div.column-right {
+      width: auto;
+      order: 2;  
+    }
+
+    img.logo {
+      scale: 85%;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
   }
