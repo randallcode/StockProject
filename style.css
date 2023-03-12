@@ -178,10 +178,28 @@ nav {
   
 }
 
+input {
+  border-radius: 8px;
+}
+
 a {
 text-decoration: none;
 text-shadow: 1px 1px 2px #2b2d42;
 }
+
+label {
+  color: white;
+  text-shadow: 2px 1px 2px #2b2d42;
+}
+
+#result {
+  color:green;
+  text-shadow: 1px 1px 1px;
+  
+}
+
+
+/****HOVER CODE*****/
 
 .ra:hover {
   color: white;
@@ -226,7 +244,7 @@ text-shadow: 1px 1px 2px #2b2d42;
 h2 {
     font-size: 2rem;    
     font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 2px #2b2d42;
+    text-shadow: 1px 1px 3px #2b2d42;
 
 }
 
@@ -354,6 +372,11 @@ footer {
     label {
       font-size: 15px;
     }
+      
+    .flex-outer {
+      height: 70vh;
+    }
+
 
   }
 
@@ -375,20 +398,15 @@ footer {
       grid-template-columns: 100%;
     }
 
-    /*div.column-left {
-      display: grid;      
-      grid-template-rows: 100%;
-      text-align: center;
-    }*/
-
-    div.main-columns {
+       div.main-columns {
       display: flex;      
       flex-direction: column;
     }
     div.column-left {
       order: 1;
-      width: auto
-     
+      width: auto;
+      height: fit-content;
+      
     }
        
     div.column-right {
@@ -408,4 +426,10 @@ footer {
       width: 200px;
       display: flex
     
+    }
+
+    .flex-outer {
+      margin: 0;
+    }
+   
   }
