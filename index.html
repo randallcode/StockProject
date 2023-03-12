@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="javascript.js"></script>
 </head>
 <body>
     <header>
@@ -25,8 +26,8 @@
                     <li><a href="#" class="topa">Contact Us</a></li>
                     <li><a href="#" class="topa">Careers</a></li>
                     <li><form>
-                        <input type="search" name="q" placeholder="Type to Search" />
-                        <input type="submit" value="Go!" />
+                        <input class="header-input" type="search" name="q" placeholder="Type to Search" />
+                        <input class="header-input" type="submit" value="Go!" />
                     </li></form>
                 </ul>  
             </nav>           
@@ -35,14 +36,39 @@
     
     <main>
         <div class="main-columns">
-            <div class="column-left"></div>
-                <div></div>
+            <div class="column-left">                
+                    <form>
+                        <h2>Use This Calculator to Estimate Portfolio Growth</h2>
+                        <ul class="flex-outer">
+                            <li>
+                                <label for="startingAmount">Starting Portfolio Amount</label>
+                                <input class="calcBox" type="text" id="startingAmount" placeholder="Enter your starting $ amount">
+                            </li>
+                            <li>
+                                <label for="yearsOfGrowth">Years of Compounding</label>
+                                <input class="calcBox" type="text" id="yearsOfGrowth" placeholder="Enter how many years of growth">
+                            </li>
+                            <li>
+                                <label for="interestValue">Interest Amount</label>
+                                <input class="calcBox" type="text" id="interestValue" placeholder="Enter the interest rate">
+                            </li>                 
+                            
+                            <li>
+                                <button type="calculate">Calculate</button>    
+                            </li>
+                            <li>
+                                Final Result:<output class="finalResult" name="result"></output>  
+                            </li>
+                        </ul>             
+                    </form>
+             </div>   
+                
+              
             <div class="column-right">
                 <h2>My Recommended Links for Investing / 401K:</h2>
                 <div class="right-rows topitem"><a href="#" class="ra">Books</a></div> 
                 <div class="right-rows middleitem"><a href="#" class="ra">YouTube</a></div>                
-                <div class="right-rows bottomitem"><a href="#" class="ra">Websites</a></div>
-                
+                <div class="right-rows bottomitem"><a href="#" class="ra">Websites</a></div>                
             </div>
 
         </div>   
