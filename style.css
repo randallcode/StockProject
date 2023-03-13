@@ -344,9 +344,10 @@ footer {
       margin: 0;
     }
 
-    footer {
+    /*footer {
         display: none;
-    }
+    } */
+
     .header-input {
       display: none;
     }
@@ -355,6 +356,13 @@ footer {
       display: grid;
       grid-template-columns: 100%;
     }
+
+    .footer-container {
+      width: 95%;
+
+    }
+
+
     div.column-left {
       width: 50%;
     }
@@ -385,28 +393,34 @@ footer {
     a.topa {
       display: none;
     }
-    footer {
-      display: none;
-    }
+    
+    
     .header-input {
       display: none;
     }
+      
+    
+    .footer-container {
+      width: 100%;
 
-        
-    nav {
-      display: grid;
-      grid-template-columns: 100%;
     }
 
-       div.main-columns {
+    nav {
+      scale: 75%;
+      
+      
+    }
+
+   
+    div.main-columns {
       display: flex;      
       flex-direction: column;
     }
+
     div.column-left {
       order: 1;
       width: auto;
-      height: fit-content;
-      
+      height: fit-content;      
     }
        
     div.column-right {
