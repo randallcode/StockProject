@@ -26,8 +26,8 @@
                     <li><a href="#" class="topa">Contact Us</a></li>
                     <li><a href="#" class="topa">Careers</a></li>
                     <li><form>
-                        <input class="header-input" type="search" name="q" placeholder="Type to Search" />
-                        <input class="header-input" type="submit" value="Search" />
+                        <input class="header-input" type="search" name="searchbox" placeholder="Type to Search" />
+                        <input button id=searchbutton class="searchbutton" type="submit" value="Search" />
                     </li></form>
                 </ul>  
             </nav>           
@@ -38,7 +38,7 @@
         <div class="main-columns">
             <div class="column-left">             
                 
-                        <h2>Use This Calculator to Estimate Portfolio Growth</h2>
+                        <h2>Use This Calculator to Estimate Portfolio Growth (Compounded Yearly)</h2>
                         <ul class="flex-outer">
                             <li>
                                 <label for="startingAmount">Starting Portfolio $</label>
@@ -49,12 +49,12 @@
                                 <input class="calcBox" type="text" id="yearsOfGrowth" placeholder="Enter how many years of growth">
                             </li>
                             <li>
-                                <label for="interestValue">Interest Amount</label>
+                                <label for="interestValue">Interest Amount (%)</label>
                                 <input class="calcBox" type="text" id="interestValue" placeholder="Enter the interest rate">
                             </li>                 
                             
                             <li>
-                                <button type="calculate" onclick="calculate()">Calculate</button>    
+                                <button id=finalCalculate type="calculate" onclick="calculate()">Calculate</button>    
                             </li>
                             <li>
                                 <label for="results">Final Portfolio Value:</label>

@@ -100,6 +100,25 @@ nav {
 }
 
 
+
+.header-input {
+   text-align: center;
+   border-radius: 10px;
+   font-family: 'Roboto', sans-serif; 
+   margin: 0;
+   padding: 0;
+}
+
+#searchbutton {
+  text-align: center;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+
+
+
 /***** Main *******/
 
 .main-columns {
@@ -143,10 +162,21 @@ nav {
   margin-top: 15px;
   width: 350px;
   text-align: center;
+  border-radius: 8px;
   
 }
 
-
+#finalCalculate {
+  display: block;
+  width: 100%;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+}
 
 .column-right {
   display: flex;
@@ -178,10 +208,6 @@ nav {
   
 }
 
-input {
-  border-radius: 8px;
-}
-
 a {
 text-decoration: none;
 text-shadow: 1px 1px 2px #2b2d42;
@@ -194,8 +220,7 @@ label {
 
 #result {
   color:green;
-  text-shadow: 1px 1px 1px;
-  
+  text-shadow: 1px 1px 1px;  
 }
 
 
@@ -245,7 +270,6 @@ h2 {
     font-size: 2rem;    
     font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px 3px #2b2d42;
-
 }
 
 
@@ -277,22 +301,22 @@ footer {
 .fa-twitter {
     background: #55ACEE;
     color: white;
-  }
+}
 
  .fa-instagram {
     background: #125688;
     color: white;
-  }
+}
 
  .fa-linkedin {
     background: #007bb5;
     color: white;
-  }
+}
   
 .fa-youtube {
     background: #bb0000;
     color: white;
-  }
+}
 
 
 .fa {
@@ -303,12 +327,12 @@ footer {
     text-decoration: none;
     border-radius: 50%;
     box-shadow: 0px 0px 10px ;
-  }
+}
 
 
 /***** Media Query for Larger than Tablets *******/
 @media screen and (max-width: 1066px) {
-  .header-input {
+  .header-input, .searchbutton {
     display: none;
   }
 
@@ -348,7 +372,7 @@ footer {
         display: none;
     } */
 
-    .header-input {
+    .header-input, .searchbutton {
       display: none;
     }
     
@@ -434,6 +458,8 @@ footer {
 
     h2 {
       font-size: 1.5rem;
+      padding-left: 24px;
+      padding-right: 24px;
     }
 
     .calcBox {
