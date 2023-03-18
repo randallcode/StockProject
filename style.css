@@ -53,33 +53,27 @@ header {
     text-align: center;
     padding: 1.5rem 0;
     background-image: linear-gradient(to right, #2b2d42, #8d99ae ); 
-    position: sticky;
     top: 0;
-    box-shadow: 0px 3px 10px;
-    border-radius: 0px  0px  25px 25px ;
-    
+    box-shadow: 0px 3px 10px white;    
+      
 }
 
 
-.logo {
+.logo {  
+  display: flex; 
     height: 4rem;
     width: 20rem;
-    margin-left: 20px;
+    margin-top: 20px;      
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;   
     align-items: center;
 
 }
 
-
-.nav-ul {
-    display: flex;
-    flex-grow: 0;
-    margin-right: 50px;
-}
 
 .nav-ul li {
     list-style: none;
@@ -100,9 +94,8 @@ nav {
 
 }
 
-
-
 .header-input {
+  display: none;
    text-align: center;
    border-radius: 10px;
    font-family: 'Roboto', sans-serif; 
@@ -114,7 +107,13 @@ nav {
   text-align: center;
   border-radius: 3px;
   font-family: 'Roboto', sans-serif;
+  display: none;
+  letter-spacing: 1px;
   
+}
+
+.topa {
+  display: none;
 }
 
 
@@ -128,26 +127,41 @@ body {
 
 .main-columns {
    display: flex;
-   flex-direction: row;    
+   flex-direction: column;
+   justify-content: center; 
+   align-content: center;
+   margin-top: 20px; 
   
 }
 
 
 .column-left {  
-  padding: 1.5rem 0;
-  width: 50%;
-  height: 100vh;
-  background-color: #7d8696;
+  padding: 24px; 
+  height: 900px;  
   text-align: center;
+  margin-bottom: 20px;
 
     
 }
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  height: 100vh;  
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px; 
+  
+}
+
 
 .flex-outer {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 0;
-  margin-left: 15px;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -161,11 +175,11 @@ body {
 }
 
 .calcBox {
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 15px;
-  width: 350px;
+  width: 100%;
+  height: 1rem;
   text-align: center;
   border-radius: 8px;
   
@@ -176,6 +190,8 @@ body {
   width: 100%;
   border: none;
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
@@ -183,18 +199,7 @@ body {
   border-radius: 10px;
 }
 
-.column-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  width: 50%;
-  height: 100vh;
-  background-color: #7d8696;
-  text-align: center;
-  
-}
+
 
 .right-rows {
   display: flex;
@@ -213,6 +218,12 @@ body {
   
 }
 
+input {
+  width: 50px;
+}
+
+
+
 a {
 text-decoration: none;
 text-shadow: 1px 1px 2px #2b2d42;
@@ -225,7 +236,7 @@ label {
 
 #result {
   color:black;
-  text-shadow: 1px 1px 1px;  
+  text-shadow: 1px 1px 1px;
 }
 
 
@@ -272,7 +283,7 @@ label {
 
 
 h2 {
-    font-size: 2rem;    
+    font-size: 35px;    
     font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px 3px #2b2d42;
 }
@@ -285,17 +296,33 @@ h2 {
 footer {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
     padding: 1.5rem 0;
     background-image: linear-gradient(to right, #2b2d42, #8d99ae ); 
-    /*position: sticky;*/
-    bottom: 0;    
+    bottom: 0;
+    box-shadow: 0px 3px 20px white;     
+  }
+
+
+
+  .nav-ul {
+    display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items: center;
+	  align-content: space-between;
   }
 
 .footer-note {
-    display: flex;
-    align-items: center;
-    font-size: 1rem !important;  
+    font-size: 20px;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px #2b2d42;
+    text-align: center;
+    scale: 75%;
 }
 
 .fa:hover {
@@ -305,21 +332,25 @@ footer {
 .fa-twitter {
     background: #55ACEE;
     color: white;
+    scale: 75%;
 }
 
  .fa-instagram {
     background: #125688;
     color: white;
+    scale: 75%;
 }
 
  .fa-linkedin {
     background: #007bb5;
     color: white;
+    scale: 75%;
 }
   
 .fa-youtube {
     background: #bb0000;
     color: white;
+    scale: 75%;
 }
 
 
@@ -333,147 +364,214 @@ footer {
     box-shadow: 0px 0px 10px ;
 }
 
+.calcBox {
+  width: 75%;
+}
 
-/***** Media Query for Larger than Tablets *******/
-@media screen and (max-width: 1066px) {
-  .header-input, .searchbutton {
-    display: none;
+
+/***** MEDIA QUERIES******/
+
+@media screen and (min-width: 481px) {
+
+
+  header {
+    position: sticky;
+    box-shadow: 0px 3px 10px white;
+    width: 100%;   
   }
 
-  .calcBox {
-    width: 275px;      
-   }
-
-   h2 {
-    text-align: center;
+  .flex-outer {
+    height: 700px;
   }
+
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {  
+    display: flex; 
+    margin-bottom: 20px;
+          
+  }
+
+  .column-left {
+    width: 50%;
+    margin-left: 25px;
+    padding: 0;
+  }
+
+  .column-right {
+    width: 50%;
+    margin-right: 25px;
+    padding: 0;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(0px, 0);  
+
+  }
+
+  .footer-note {
+    transform: translate(-15px, 0);
+    scale: 100%;  
+
+  }
+
+  .fa.fa-twitter {
+    scale: 100%;
+  }
+
+  .fa.fa-instagram {
+    scale: 100%;
+  }
+
+  .fa.fa-linkedin {
+    scale: 100%;
+  }
+
+  .fa.fa-youtube {
+    scale: 100%;
+  }
+
+  .topa {
+    display: flex;
+  }
+
+  
+  #top-nav {
+    margin-right: 20px;
+    
+  }
+
+form {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80px;
+  align-items: center;
 
 }
 
-/***** Media Query for Tablets *******/
-  @media screen and (max-width: 800px) {
-    ul.nav-ul {
-      margin-right: 0;
-      margin-left: 55px;
-      margin-top: 15px;
-      justify-content: center;      
+
+.header-input { 
+  display: none;     
+}
+
+
+#searchbutton {  
+  display: none;
+   
+}
+
+.main-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-content: center;
+  
+}
+
+
+}
+
+
+@media screen and (min-width: 1025px) {
+
+    header {
+      position: sticky;
+      box-shadow: 0px 3px 10px white;   
     }
 
-    /*a.topa {
-      color: black;    
-    }*/
 
-
-    h2 {
-      text-align: center;
-    }
- 
-    img.logo {
-      margin: 0;
-    }
-
-    /*footer {
-        display: none;
-    } */
-
-    .header-input, .searchbutton {
-      display: none;
-    }
-    
     nav {
-      display: grid;
-      grid-template-columns: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
-    .footer-container {
-      width: 95%;
-
+    .logo {  
+      display: flex; 
+      margin-top: 20px;
+      margin-left: 50px;
+            
     }
 
-
-    div.column-left {
+    .column-left {
       width: 50%;
     }
-    
-    div.column-right {
-      width: 50%;  
-    }    
 
-    .calcBox {
-     width: fit-content;
-     display: flex;
-          
+    .column-right {
+      width: 50%;
     }
 
-    label {
-      font-size: 15px;
-    }
-      
     .flex-outer {
-      height: 70vh;
+      height: 900px;
     }
 
-
-  }
-
-/***** Media Query for Cellphones *******/
-  @media screen and (max-width: 481px) {
-    a.topa {
-      display: none;
-    }
-    
-    
-    .header-input {
-      display: none;
-    }
-      
-    
     .footer-container {
-      width: 100%;
-
-    }
-
-    nav {
-      scale: 75%;
-      
-      
-    }
-
-   
-    div.main-columns {
-      display: flex;      
+      display: flex;
       flex-direction: column;
+      justify-content: center;
+      transform: translate(20px, 0);  
+
     }
 
-    div.column-left {
-      order: 1;
-      width: auto;
-      height: fit-content;      
-    }
-       
-    div.column-right {
-      width: auto;
-      order: 2;  
+    .footer-note {
+      transform: translate(-25px, 0);  
+
     }
 
-    img.logo {
-      scale: 85%;
+    .topa {
+      display: flex;
     }
 
-    h2 {
-      font-size: 1.5rem;
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-
-    .calcBox {
-      width: 200px;
-      display: flex
     
+    #top-nav {
+      margin-right: 20px;
+      
     }
 
-    .flex-outer {
-      margin: 0;
-    }
-   
+  form {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 80px;
+    align-items: center;
+
   }
+
+
+  .header-input { 
+    display: flex; 
+    width: 200px;
+    height: 20px;
+    margin-right: 20px;
+    
+      
+  }
+
+
+  #searchbutton {  
+    display: flex;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 100px;
+    font-family: 'Roboto', sans-serif;
+    
+  }
+
+  .main-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-content: center;
+    
+  }
+
+
+}
