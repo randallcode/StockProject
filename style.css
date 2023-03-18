@@ -406,6 +406,7 @@ footer {
   .column-right {
     width: 50%;
     margin-right: 25px;
+    margin-bottom: 20px;
     padding: 0;
   }
 
@@ -507,6 +508,7 @@ form {
 
     .column-right {
       width: 50%;
+      margin-bottom: 20px;
     }
 
     .flex-outer {
